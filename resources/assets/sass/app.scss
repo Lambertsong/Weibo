@@ -24,6 +24,11 @@ textarea {
   @extend .alert-info;
 }
 
+// container
+.container {
+  width: 1300px;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -177,6 +182,18 @@ aside {
   margin-top: 20px;
 }
 
+// images
+.rec-image {
+  float: left;
+  margin: 6px;
+  width: 200px;
+  height: 200px;
+}
+
+.inline_form {
+  display: inline;
+  margin: 0 6px;
+}
 /* sidebar */
 
 aside {

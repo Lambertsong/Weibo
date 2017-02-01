@@ -8298,6 +8298,10 @@ textarea {
   text-align: center;
 }
 
+.container {
+  width: 1300px;
+}
+
 /* typography */
 
 h1,
@@ -8464,6 +8468,18 @@ aside textarea {
 
 .status_form {
   margin-top: 20px;
+}
+
+.rec-image {
+  float: left;
+  margin: 6px;
+  width: 200px;
+  height: 200px;
+}
+
+.inline_form {
+  display: inline;
+  margin: 0 6px;
 }
 
 /* sidebar */

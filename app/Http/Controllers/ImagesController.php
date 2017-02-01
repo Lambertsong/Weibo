@@ -25,7 +25,7 @@ class ImagesController extends Controller
      */
     public function index()
     {
-        $images = Auth::user()->images()->orderBy('created_at', 'desc')->paginate(24);
+        $images = Auth::user()->images()->orderBy('created_at', 'desc')->paginate(12);
         return view('images/index', compact('images'));
     }
 
@@ -84,7 +84,8 @@ class ImagesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $image = Image::findOrFail($id);
+        return view('images/edit', compact('image'));
     }
 
     /**
@@ -96,7 +97,7 @@ class ImagesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
@@ -107,7 +108,11 @@ class ImagesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $image = Image::findOrFail($id);
+        Storage::delete($image->path);
+        $image->delete();
+        session()->flash('success', '图片已被成功删除！');
+        return redirect()->back();
     }
 
     public function download($id)

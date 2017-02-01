@@ -4,11 +4,11 @@
 @section('content')
     <div>
         <h1>我的图片</h1>
-        <ul class="images">
+        <div>
             @foreach ($images as $image)
                 @include('images._image')
             @endforeach
-        </ul>
+        </div>
 
         {!! $images->render() !!}
     </div>
