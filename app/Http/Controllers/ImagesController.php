@@ -101,7 +101,16 @@ class ImagesController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $image = Image::findOrFail($id);
 
+        $x = $request->input('x');
+        $y = $request->input('y');
+        $w = $request->input('w');
+        $h = $request->input('h');
+
+        $manager = new ImageManager();
+        $manager->make(realpath(base_path('storage/app')).'/'.$image->path)->crop($w, $h, $x, $y)->save();
+        return redirect()->route('images.show', $image->id);
     }
 
     /**

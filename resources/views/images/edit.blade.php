@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.CropImage')
 @section('title', '图片编辑')
 
 @section('content')
@@ -10,16 +10,19 @@
             <div class="panel-body">
                 @include('shared.errors')
 
+                <img src="{{ route('images.show', $image->id) }}" id="img">
+                <br>
+
                 <form method="POST" action="{{ route('images.update', $image->id )}}">
                     {{ method_field('PATCH') }}
                     {{ csrf_field() }}
 
-                    <div class="form-group">
-                        <label for="name">名称：</label>
-                        <input type="text" name="name" class="form-control" value="{{ $image->path }}">
-                    </div>
+                    <input type="hidden" id="x" name="x" />
+                    <input type="hidden" id="y" name="y" />
+                    <input type="hidden" id="w" name="w" />
+                    <input type="hidden" id="h" name="h" />
 
-                    <button type="submit" class="btn btn-primary">更新</button>
+                    <button type="submit" class="btn btn-primary">裁剪图片</button>
                 </form>
             </div>
         </div>
