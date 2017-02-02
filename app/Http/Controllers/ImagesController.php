@@ -10,6 +10,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Storage;
+use Intervention\Image\ImageManager;
 
 class ImagesController extends Controller
 {
@@ -73,7 +74,10 @@ class ImagesController extends Controller
     public function show($id)
     {
         $image = Image::findOrFail($id);
-        return response()->download(realpath(base_path('storage/app')).'/'.$image->path, null, [], null);
+
+        $manager = new ImageManager();
+
+        return $manager->make(realpath(base_path('storage/app')).'/'.$image->path)->response();
     }
 
     /**
