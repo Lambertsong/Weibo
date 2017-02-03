@@ -140,4 +140,15 @@ class UsersController extends Controller
         $title = '粉丝';
         return view('users.show_follow', compact('users', 'title'));
     }
+
+    public function getAvatar($id)
+    {
+        $user = User::findOrFail($id);
+        return view('users.avatar', compact('user'));
+    }
+
+    public function postAvatar($id)
+    {
+        // TUDO
+    }
 }

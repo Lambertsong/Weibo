@@ -39,3 +39,6 @@ delete('/users/followers/{id}', 'FollowersController@destroy')->name('followers.
 
 resource('images', 'ImagesController');
 get('images/{id}/download', 'ImagesController@download');
+
+get('/users/{id}/avatar', 'UsersController@getAvatar')->name('avatar.get');
+post('/users/{id}/avatar', 'UsersController@postAvatar')->name('avatar.post');

@@ -58,6 +58,11 @@ class User extends Model implements AuthenticatableContract,
         return "http://www.gravatar.com/avatar/$hash?s=$size";
     }
 
+    public function avatar($size = '100')
+    {
+        return $this->attributes['avatar'] ? '/images/'.$this->attributes['avatar'] : $this->gravatar($size);
+    }
+
     /**
      * 对用户密码加密
      * @param string $password 密码
