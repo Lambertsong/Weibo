@@ -1,4 +1,4 @@
-@extends('layouts.CropImage')
+@extends('layouts.image')
 @section('title', '图片编辑')
 
 @section('content')

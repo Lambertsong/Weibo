@@ -1,8 +1,22 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
         <div class="col-md-offset-1 col-md-10">
-            <a href="/" id="logo">Sample App</a>
+            <a href="/" id="logo">Weibo</a>
             <nav>
+                <ul class="nav navbar-nav navbar-left">
+                    @if (Auth::check())
+                        <li><a href="{{ route('users.index') }}">test</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                图片 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('images.create') }}">上传图片</a></li>
+                                <li><a href="{{ route('images.index') }}">我的图片</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
                         <li><a href="{{ route('users.index') }}">用户列表</a></li>

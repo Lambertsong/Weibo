@@ -5,13 +5,14 @@
 
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/jquery.Jcrop.css">
+    <link rel="stylesheet" href="/css/dropzone.css">
 
     <script src="/js/app.js"></script>
     <script src="/js/jquery.Jcrop.js"></script>
+    <script src="/js/dropzone.js"></script>
     <script type="text/javascript">
         $(function() {
             $('#img').Jcrop({
-                aspectRatio: 1,
                 onSelect: updateCoords
             });
         });
@@ -21,12 +22,32 @@
             $('#y').val(c.y);
             $('#w').val(c.w);
             $('#h').val(c.h);
-        };
+        }
 
         function checkCoords() {
             if (parseInt($('#w').val())) return true;
             alert('Please select a crop region then press submit.');
             return false;
+        }
+
+        Dropzone.options.dropzone = {
+            paramName: "image",
+            maxFilesize: 2,
+            acceptedFiles: ".jpg,.png,.gif,.bmp",
+            dictDefaultMessage: '<h3>Drop files here or click to upload.</h3>',
+            autoProcessQueue: false,
+            init: function() {
+                var submitButton = document.querySelector("#SubmitAll");
+                myDropzone = this; // closure
+
+                submitButton.addEventListener("click", function() {
+                    myDropzone.processQueue(); // Tell Dropzone to process all queued files.
+                });
+
+                this.on("success", function(file, result) {
+                    file.previewTemplate.appendChild(document.createTextNode(result.message));
+                });
+            }
         };
     </script>
 </head>

@@ -49,9 +49,11 @@ class ImagesController extends Controller
     public function store(Request $request)
     {
         $file = $request->file('image');
+        if(!$file) {
+            abort(503, '未接收到文件');
+        }
         if(!$file->isValid()) {
-            session()->flash('warning', $file->getErrorMessage());
-            return redirect()->back();
+            abort(502, $file->getErrorMessage());
         }
 
         $path = 'images/'.date("Y").'/'. date("m").'/'.str_random().'.'.$file->getClientOriginalExtension();
@@ -62,7 +64,7 @@ class ImagesController extends Controller
             'path' => $path,
         ]);
 
-        return redirect()->route('images.index');
+        return response()->json(['result'=>200, 'message'=>'上传成功']);
     }
 
     /**

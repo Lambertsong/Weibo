@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.image')
 @section('title', '上传图片')
 
 @section('content')
@@ -10,16 +10,11 @@
             <div class="panel-body">
                 @include('shared.errors')
 
-                <form method="POST" action="{{ route('images.store') }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('images.store') }}" class="dropzone" id="dropzone" enctype="multipart/form-data">
                     {{ csrf_field() }}
-
-                    <div class="form-group">
-                        <label for="name">图片：</label>
-                        <input type="file" name="image">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">上传</button>
                 </form>
+                <br>
+                <button id="SubmitAll" class="btn btn-primary">点击上传所有图片</button>
             </div>
         </div>
     </div>
