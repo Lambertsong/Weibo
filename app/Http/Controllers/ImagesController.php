@@ -43,17 +43,17 @@ class ImagesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \Illuminate\Http\Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
         $file = $request->file('image');
         if(!$file) {
-            abort(503, '未接收到文件');
+            return response('未接收到文件', 503);
         }
         if(!$file->isValid()) {
-            abort(502, $file->getErrorMessage());
+            return response($file->getErrorMessage(), 502);
         }
 
         $path = 'images/'.date("Y").'/'. date("m").'/'.str_random().'.'.$file->getClientOriginalExtension();

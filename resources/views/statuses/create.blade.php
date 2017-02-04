@@ -5,7 +5,11 @@
         <div class="row">
             <div class="col-md-8">
                 <section class="status_form">
-                    @include('shared.status_form')
+                    @if(isset($status))
+                        @include('shared.status_edit')
+                    @else
+                        @include('shared.status_create')
+                    @endif
                 </section>
             </div>
             <aside class="col-md-4">

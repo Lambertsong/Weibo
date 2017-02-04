@@ -8,6 +8,15 @@
                         <li><a href="{{ route('users.index') }}">test</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                动态 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('status.create') }}">发布动态</a></li>
+                                <li><a href="{{ route('status.index') }}">我的动态</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 图片 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">

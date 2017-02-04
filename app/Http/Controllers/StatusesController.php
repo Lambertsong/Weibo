@@ -19,12 +19,16 @@ class StatusesController extends Controller
 
     public function index()
     {
-
+        $user = Auth::user();
+        $statuses = $user->statuses()->orderBy('created_at', 'desc')->paginate(20);
+        return view('statuses/index', compact('user', 'statuses'));
     }
 
-    public function show()
+    public function show($id)
     {
-
+        $status = Status::findOrFail($id);
+        $user = Auth::user();
+        return view('statuses/show', compact('user', 'status'));
     }
 
     public function create()
@@ -44,14 +48,23 @@ class StatusesController extends Controller
         return redirect()->back();
     }
 
-    public function edit()
+    public function edit($id)
     {
-
+        $status = Status::findOrFail($id);
+        return view('statuses/create', compact('status'));
     }
 
-    public function update()
+    public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'content' => 'required|max:140'
+        ]);
 
+        $status = Status::findOrFail($id);
+        $status->content = $request->input('content');
+        $status->save();
+
+        return redirect()->back();
     }
 
     public function destroy($id)

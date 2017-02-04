@@ -3521,7 +3521,7 @@ _e(function (E, $) {
     };
 
     // 百度地图的key
-    E.config.mapAk = 'TVhjYjq1ICT2qqL5LdS8mwas';
+    E.config.mapAk = 'KxPxwlNOmf2SMDPPQNa1NintQZpIlwSz';
 
     // 上传图片的配置
     // server地址
@@ -3540,7 +3540,7 @@ _e(function (E, $) {
 
     // 自定义上传时传递的参数（如 token）
     E.config.uploadParams = {
-        /* token: 'abcdef12345' */
+        _token: $('meta[name="csrf-token"]').attr('content') // csrf验证字段
     };
 
     // 自定义上传是的header参数

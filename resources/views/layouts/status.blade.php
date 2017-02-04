@@ -22,14 +22,10 @@
 <script src="/js/app.js"></script>
 <script src="/js/wangEditor.js"></script>
 <script type="text/javascript">
-    // 为页面所有的editor配置全局的密钥
-    wangEditor.config.mapAk = 'KxPxwlNOmf2SMDPPQNa1NintQZpIlwSz';
     var editor = new wangEditor('content');
+
     editor.config.uploadImgUrl = '/images/upload';
-    // csrf验证字段
-    editor.config.uploadParams = {
-        _token: $('meta[name="csrf-token"]').attr('content')
-    };
+
     editor.create();
 </script>
 </body>
