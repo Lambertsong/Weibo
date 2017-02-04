@@ -112,7 +112,8 @@ class ImagesController extends Controller
 
         $manager = new ImageManager();
         $manager->make(realpath(base_path('storage/app')).'/'.$image->path)->crop($w, $h, $x, $y)->save();
-        return redirect()->route('images.show', $image->id);
+        session()->flash('success', '图像裁剪成功');
+        return redirect()->back();
     }
 
     /**

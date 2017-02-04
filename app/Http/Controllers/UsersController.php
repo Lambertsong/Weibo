@@ -11,6 +11,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 use Mail;
+use Storage;
 
 class UsersController extends Controller
 {
@@ -147,8 +148,28 @@ class UsersController extends Controller
         return view('users.avatar', compact('user'));
     }
 
-    public function postAvatar($id)
+    public function postAvatar(Request $request, $id)
     {
-        // TUDO
+        $file = $request->file('image');
+        if(!$file) {
+            abort(503, '未接收到文件');
+        }
+        if(!$file->isValid()) {
+            abort(502, $file->getErrorMessage());
+        }
+
+        $path = 'images/'.date("Y").'/'. date("m").'/'.str_random().'.'.$file->getClientOriginalExtension();
+
+        Storage::put($path, file_get_contents($file->getRealPath()));
+
+        $image = Auth::user()->images()->create([
+            'path' => $path,
+        ]);
+
+        $user = User::findOrFail($id);
+        $user->avatar = $image->id;
+        $user->save();
+
+        return redirect()->back();
     }
 }

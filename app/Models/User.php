@@ -60,7 +60,7 @@ class User extends Model implements AuthenticatableContract,
 
     public function avatar($size = '100')
     {
-        return $this->attributes['avatar'] ? '/images/'.$this->attributes['avatar'] : $this->gravatar($size);
+        return $this->attributes['avatar'] ? route('images.show', $this->attributes['avatar']) : $this->gravatar($size);
     }
 
     /**

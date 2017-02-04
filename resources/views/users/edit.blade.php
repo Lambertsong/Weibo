@@ -12,8 +12,8 @@
                 @include('shared.errors')
 
                 <div class="gravatar_edit">
-                    <a href="http://gravatar.com/emails" target="_blank">
-                        <img src="{{ $user->gravatar('200') }}" alt="{{ $user->name }}" class="gravatar"/>
+                    <a href="{{ route('avatar.get', $user->id) }}" target="_blank">
+                        <img src="{{ $user->avatar('200') }}" alt="{{ $user->name }}" class="gravatar"/>
                     </a>
                 </div>
 

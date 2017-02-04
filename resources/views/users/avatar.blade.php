@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.avatar')
 @section('title', '更新头像')
 
 @section('content')
@@ -10,13 +10,31 @@
             <div class="panel-body">
                 @include('shared.errors')
 
-                <form method="POST" action="{{ route('avatar.post') }}">
-                    {{ csrf_field() }}
+                @if($user->avatar)
+                    <div id="info">
+                        <img src="{{ route('images.show', $user->avatar) }}" id="img">
 
-                    <img src="{{ route('') }}"
+                        <form method="POST" action="{{ route('images.update', $user->avatar) }}">
+                            {{ csrf_field() }}
+                            {{ method_field('PATCH') }}
 
-                    <button type="submit" class="btn btn-primary">提交</button>
-                </form>
+                            <input type="hidden" id="x" name="x" />
+                            <input type="hidden" id="y" name="y" />
+                            <input type="hidden" id="w" name="w" />
+                            <input type="hidden" id="h" name="h" />
+
+                            <br><br>
+                            <button type="submit" class="btn btn-primary">裁剪图片</button>
+                            <button type="button" class="btn btn-primary btn-info" id="changeAvatar">更换图像</button>
+                        </form>
+                    </div>
+                @else
+                    <form method="POST" action="{{ route('avatar.post', $user->id) }}" enctype="multipart/form-data">
+                        {{ csrf_field() }}
+                        <input type="file" name="image" class="dz-file-preview">
+                        <button type="submit" class="btn btn-primary">上传头像</button>
+                    </form>
+                @endif
             </div>
         </div>
     </div>
