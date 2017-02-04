@@ -29,7 +29,7 @@ post('password/email', 'Auth\PasswordController@postEmail')->name('password.rese
 get('password/reset/{token}', 'Auth\PasswordController@getReset')->name('password.edit');
 post('password/reset', 'Auth\PasswordController@postReset')->name('password.update');
 
-resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
+resource('status', 'StatusesController');
 
 get('/users/{id}/followings', 'UsersController@followings')->name('users.followings');
 get('/users/{id}/followers', 'UsersController@followers')->name('users.followers');
@@ -39,6 +39,7 @@ delete('/users/followers/{id}', 'FollowersController@destroy')->name('followers.
 
 resource('images', 'ImagesController');
 get('images/{id}/download', 'ImagesController@download');
+post('images/upload', 'ImagesController@upload');
 
 get('/users/{id}/avatar', 'UsersController@getAvatar')->name('avatar.get');
 post('/users/{id}/avatar', 'UsersController@postAvatar')->name('avatar.post');

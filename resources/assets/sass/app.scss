@@ -153,8 +153,8 @@ input {
     margin-left: 60px;
     word-break: break-word;
     img {
-      display: block;
-      padding: 5px 0;
+      display: inline;
+      padding: 5px;
     }
   }
   .timestamp {
@@ -190,8 +190,7 @@ aside {
 .rec-image {
   float: left;
   margin: 6px;
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
 }
 
 .inline_form {

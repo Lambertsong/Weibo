@@ -8,9 +8,9 @@
     <span class="timestamp">
         {{ $status->created_at->diffForHumans() }}
     </span>
-    <span class="content">{{ $status->content }}</span>
+    <span class="content">{!! $status->content !!}</span>
     @can('destroy', $status)
-        <form action="{{ route('statuses.destroy', $status->id) }}" method="POST">
+        <form action="{{ route('status.destroy', $status->id) }}" method="POST">
             {{ csrf_field() }}
             {{ method_field('DELETE') }}
             <button type="submit" class="btn btn-sm btn-danger status-delete-btn">删除</button>

@@ -14,9 +14,22 @@ class StatusesController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', [
-            'only' => ['store', 'destroy']
-        ]);
+        $this->middleware('auth');
+    }
+
+    public function index()
+    {
+
+    }
+
+    public function show()
+    {
+
+    }
+
+    public function create()
+    {
+        return view('statuses/create');
     }
 
     public function store(Request $request)
@@ -29,6 +42,16 @@ class StatusesController extends Controller
             'content' => $request->input('content')
         ]);
         return redirect()->back();
+    }
+
+    public function edit()
+    {
+
+    }
+
+    public function update()
+    {
+
     }
 
     public function destroy($id)

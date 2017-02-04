@@ -60,11 +60,32 @@ class ImagesController extends Controller
 
         Storage::put($path, file_get_contents($file->getRealPath()));
 
-        $user = Auth::user()->images()->create([
+        Auth::user()->images()->create([
             'path' => $path,
         ]);
 
         return response()->json(['result'=>200, 'message'=>'上传成功']);
+    }
+
+    public function upload(Request $request)
+    {
+        $file = $request->file('image');
+        if(!$file) {
+            return response('error|文件上传失败');
+        }
+        if(!$file->isValid()) {
+            return response('error|文件上传错误');
+        }
+
+        $path = 'images/'.date("Y").'/'. date("m").'/'.str_random().'.'.$file->getClientOriginalExtension();
+
+        Storage::put($path, file_get_contents($file->getRealPath()));
+
+        $image = Auth::user()->images()->create([
+            'path' => $path,
+        ]);
+
+        return response(route('images.show', $image->id));
     }
 
     /**

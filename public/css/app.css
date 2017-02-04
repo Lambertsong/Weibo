@@ -8444,8 +8444,8 @@ input {
 }
 
 .statuses .content img {
-  display: block;
-  padding: 5px 0;
+  display: inline;
+  padding: 5px;
 }
 
 .statuses .timestamp {
@@ -8477,8 +8477,7 @@ aside textarea {
 .rec-image {
   float: left;
   margin: 6px;
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
 }
 
 .inline_form {
