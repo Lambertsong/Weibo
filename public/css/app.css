@@ -8450,8 +8450,13 @@ input {
 
 .statuses .timestamp {
   color: #777777;
-  display: block;
+  display: inline;
   margin-left: 60px;
+}
+
+.statuses .comment {
+  display: inline;
+  margin-left: 100px;
 }
 
 .statuses .gravatar {

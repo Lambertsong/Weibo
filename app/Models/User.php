@@ -82,6 +82,11 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasMany(Image::class);
     }
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
     public function feed()
     {
         $user_ids = Auth::user()->followings->pluck('id')->toArray();

@@ -9,6 +9,7 @@
         <title>@yield('title', 'Sample App')</title>
 
         <link rel="stylesheet" href="/css/app.css">
+        <link href="/css/font-awesome.css" rel='stylesheet' type='text/css'>
         @yield('css')
     </head>
     <body>
@@ -23,6 +24,7 @@
         </div>
 
         <script src="/js/app.js"></script>
+        <script src="/js/comment.js"></script>
         @yield('js')
     </body>
 </html>

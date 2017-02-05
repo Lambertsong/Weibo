@@ -4,17 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class Comment extends Model
 {
-    protected $fillable = ['content'];
+    protected $fillable = ['content', 'status_id'];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function comments()
+    public function status()
     {
-        return $this->hasMany(Comment::class);
+        return $this->belongsTo(Status::class);
     }
 }
