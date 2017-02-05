@@ -13,7 +13,7 @@
         <form action="{{ route('images.destroy', $image->id) }}" class="inline_form" method="POST">
             {{ csrf_field() }}
             {{ method_field('DELETE') }}
-            <button type="submit" class="btn btn-sm btn-danger status-delete-btn" onclick="confirm('确定要删除图片吗？')">删除</button>
+            <button type="submit" class="btn btn-sm btn-danger status-delete-btn" onclick="return confirmDelete()">删除</button>
         </form>
     </div>
 </div>
