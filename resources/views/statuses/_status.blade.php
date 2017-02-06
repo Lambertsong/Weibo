@@ -6,7 +6,7 @@
         <a href="{{ route('users.show', $user->id )}}">{{ $user->name }}</a>
     </span>
 
-    <span class="content">{!! $status->content !!}</span>
+    <span class="contents">{!! $status->content !!}</span>
     @can('destroy', $status)
         <form action="{{ route('status.destroy', $status->id) }}" method="POST">
             {{ csrf_field() }}
@@ -17,19 +17,25 @@
     <span class="timestamp">
         {{ $status->created_at->diffForHumans() }}
     </span>
-    <span class="comment" onclick="insertCommentForm(this.id)" id="comment-{{ $status->id }}">
-       <i class="fa fa-commenting" aria-hidden="true"></i> 发表评论
+    <span class="comment">
+        <span onclick="insertCommentForm(this.id)" id="comment-{{ $status->id }}">
+            <i class="fa fa-commenting" aria-hidden="true"></i> 发表评论
+        </span>
         <form action="{{ route('comment.store') }}" method="POST" style="display: none;" id="comment-form-{{ $status->id }}">
+            @include('shared.errors')
             {{csrf_field()}}
             <input type="hidden" name="status" value="{{ $status->id }}">
-            <textarea class="form-control" rows="3" name="content" id="content">{{ old('content') }}</textarea>
-            <br><button type="submit" class="btn btn-primary">发布评论</button>
-            @include('shared.errors')
+            <textarea class="form-control comment-form" rows="3" name="content" id="content">{{ old('content') }}</textarea>
+            <button type="submit" class="btn btn-primary">发布评论</button>
         </form>
     </span>
-    @if($status->comments)
-        @foreach($status->comments as $comment)
-            @include('comments._comment', ['comment' => $comment])
-        @endforeach
-    @endif
+    <span class="comments">
+        <ul>
+            @if($status->comments)
+                @foreach($status->comments as $comment)
+                    @include('comments._comment', ['comment' => $comment])
+                @endforeach
+            @endif
+        </ul>
+    </span>
 </li>

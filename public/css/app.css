@@ -8435,15 +8435,16 @@ input {
 .statuses .user {
   margin-top: 5em;
   padding-top: 0;
+  font-size: 1.2em;
 }
 
-.statuses .content {
+.statuses .contents {
   display: block;
   margin-left: 60px;
-  word-break: break-word;
+  margin-bottom: 16px;
 }
 
-.statuses .content img {
+.statuses .contents img {
   display: inline;
   padding: 5px;
 }
@@ -8457,6 +8458,17 @@ input {
 .statuses .comment {
   display: inline;
   margin-left: 100px;
+}
+
+.statuses .comment form {
+  margin-left: 60px;
+  margin-top: 10px;
+}
+
+.statuses .comment form button {
+  position: absolute;
+  margin-top: 10px;
+  right: 0;
 }
 
 .statuses .gravatar {
@@ -8477,6 +8489,32 @@ aside textarea {
 
 .status_form {
   margin-top: 20px;
+}
+
+.comments {
+  display: block;
+  margin-top: 6px;
+  padding-left: 20px;
+}
+
+.comments .comment-content {
+  display: inline;
+}
+
+.comments li {
+  padding: 0;
+  border-top: none;
+  position: relative;
+  list-style-type: none;
+}
+
+.comments p {
+  display: inline;
+  font-size: 0.9em;
+}
+
+.comments img {
+  padding: 0 3px;
 }
 
 .rec-image {

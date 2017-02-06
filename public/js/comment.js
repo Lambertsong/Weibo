@@ -6,5 +6,9 @@ function insertCommentForm(id) {
     var result = pattern.exec(id);
     var status = result[1];
 
-    $("#comment-form-"+status).show();
+    if($("#comment-form-"+status).is(":hidden")) {
+        $("#comment-form-"+status).show();
+    } else {
+        $("#comment-form-"+status).hide();
+    }
 }

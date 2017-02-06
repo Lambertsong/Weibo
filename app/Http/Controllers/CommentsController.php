@@ -20,7 +20,7 @@ class CommentsController extends Controller
     {
         $this->validate($request, [
             'status' => 'required',
-            'content' => 'required|max:100'
+            'content' => 'required|max:160'
         ]);
 
         Auth::user()->comments()->create([
@@ -28,6 +28,7 @@ class CommentsController extends Controller
             'status_id' => $request->input('status')
         ]);
 
+        session()->flash('success', '评论成功！');
         return redirect()->back();
     }
 

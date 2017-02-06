@@ -147,11 +147,12 @@ input {
   .user {
     margin-top: 5em;
     padding-top: 0;
+    font-size: 1.2em;
   }
-  .content {
+  .contents {
     display: block;
     margin-left: 60px;
-    word-break: break-word;
+    margin-bottom: 16px;
     img {
       display: inline;
       padding: 5px;
@@ -165,6 +166,15 @@ input {
   .comment {
     display: inline;
     margin-left: 100px;
+    form {
+      margin-left: 60px;
+      margin-top: 10px;
+      button {
+        position: absolute;
+        margin-top: 10px;
+        right: 0;
+      }
+    }
   }
   .gravatar {
     margin-right: 10px;
@@ -188,6 +198,29 @@ aside {
 
 .status_form {
   margin-top: 20px;
+}
+
+// comments
+.comments {
+  display: block;
+  margin-top: 6px;
+  padding-left: 20px;
+  .comment-content {
+    display: inline;
+  }
+  li {
+    padding: 0;
+    border-top: none;
+    position: relative;
+    list-style-type: none;
+  }
+  p {
+    display: inline;
+    font-size: 0.9em;
+  }
+  img {
+    padding: 0 3px;
+  }
 }
 
 // images

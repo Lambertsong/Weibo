@@ -30,10 +30,5 @@
 
 @section('js')
     <script src="/js/wangEditor.js"></script>
-    <script type="text/javascript">
-        var editor = new wangEditor('content');
-        editor.config.uploadImgUrl = '/images/upload';
-
-        editor.create();
-    </script>
+    <script src="/js/editor.js"></script>
 @stop

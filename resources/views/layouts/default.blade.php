@@ -24,7 +24,6 @@
         </div>
 
         <script src="/js/app.js"></script>
-        <script src="/js/comment.js"></script>
         @yield('js')
     </body>
 </html>

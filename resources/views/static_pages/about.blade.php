@@ -4,26 +4,8 @@
 @section('content')
     <h1>关于页</h1>
     <p>
-        MIT License
-
-        Copyright (c) 2016 d4smart http://www.d4smart.com & https://github.com/d4smart
-
-        Permission is hereby granted, free of charge, to any person obtaining a copy
-        of this software and associated documentation files (the "Software"), to deal
-        in the Software without restriction, including without limitation the rights
-        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-        copies of the Software, and to permit persons to whom the Software is
-        furnished to do so, subject to the following conditions:
-
-        The above copyright notice and this permission notice shall be included in all
-        copies or substantial portions of the Software.
-
-        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-        SOFTWARE.
+    <pre>
+        <div style="text-align: center;"><i><font face="Consolas" size="3">MIT License</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3"><br></font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">Copyright (c) 2016 d4smart http://www.d4smart.com &amp; https://github.com/d4smart</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3"><br></font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">Permission is hereby granted, free of charge, to any person obtaining a copy</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">of this software and associated documentation files (the "Software"), to deal</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">in the Software without restriction, including without limitation the rights</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">copies of the Software, and to permit persons to whom the Software is</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">furnished to do so, subject to the following conditions:</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3"><br></font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">The above copyright notice and this permission notice shall be included in all</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">copies or substantial portions of the Software.</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3"><br></font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</font></i></div><div style="text-align: center;"><i><font face="Consolas" size="3">SOFTWARE.</font></i></div>
+    </pre>
     </p>
 @stop

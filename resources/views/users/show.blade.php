@@ -1,5 +1,10 @@
 @extends('layouts.default')
 @section('title', $user->name)
+
+@section('css')
+    <link rel="stylesheet" href="/css/wangEditor.css">
+@stop
+
 @section('content')
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
@@ -29,4 +34,10 @@
             </div>
         </div>
     </div>
+@stop
+
+@section('js')
+    <script src="/js/wangEditor.js"></script>
+    <script src="/js/editors.js"></script>
+    <script src="/js/comment.js"></script>
 @stop
