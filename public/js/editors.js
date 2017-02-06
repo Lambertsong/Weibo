@@ -7,6 +7,8 @@ var divs = document.getElementsByClassName('comment-form');
 var length = divs.length;
 for(var i = 0; i < length; i++) {
     var editor = new wangEditor(divs[i]);
+
+    editor.config.uploadImgUrl = '/images/upload';
     // 自定义菜单
     editor.config.menus = [
         'source',

@@ -50,13 +50,16 @@ class ImagesController extends Controller
     {
         $file = $request->file('image');
         if(!$file) {
-            return response('未接收到文件', 503);
+            return response(json_encode(['message'=>'未接收到文件']), 404);
         }
         if(!$file->isValid()) {
-            return response($file->getErrorMessage(), 502);
+            return response(json_encode(['message'=>$file->getErrorMessage()]), 403);
+        }
+        if(!in_array(strtolower($file->getClientOriginalExtension()), ['jpg', 'png', 'gif'])) {
+            return response(json_encode(['message'=>'文件格式不资辞']), 403);
         }
 
-        $path = 'images/'.date("Y").'/'. date("m").'/'.str_random().'.'.$file->getClientOriginalExtension();
+        $path = 'images/'.date("Y").'/'. date("m").'/'.str_random().'.'.strtolower($file->getClientOriginalExtension());
 
         Storage::put($path, file_get_contents($file->getRealPath()));
 
@@ -64,7 +67,7 @@ class ImagesController extends Controller
             'path' => $path,
         ]);
 
-        return response()->json(['result'=>200, 'message'=>'上传成功']);
+        return response()->json(['message'=>'上传成功']);
     }
 
     public function upload(Request $request)
@@ -75,6 +78,9 @@ class ImagesController extends Controller
         }
         if(!$file->isValid()) {
             return response('error|文件上传错误');
+        }
+        if(!in_array(strtolower($file->getClientOriginalExtension()), ['jpg', 'png', 'gif'])) {
+            return response('error|不资辞这个文件格式');
         }
 
         $path = 'images/'.date("Y").'/'. date("m").'/'.str_random().'.'.$file->getClientOriginalExtension();

@@ -37,44 +37,5 @@
 @section('js')
     <script src="/js/jquery.Jcrop.js"></script>
     <script src="/js/dropzone.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $('#img').Jcrop({
-                onSelect: updateCoords
-            });
-        });
-
-        function updateCoords(c) {
-            $('#x').val(c.x);
-            $('#y').val(c.y);
-            $('#w').val(c.w);
-            $('#h').val(c.h);
-        }
-
-        function checkCoords() {
-            if (parseInt($('#w').val())) return true;
-            alert('Please select a crop region then press submit.');
-            return false;
-        }
-
-        Dropzone.options.dropzone = {
-            paramName: "image",
-            maxFilesize: 2,
-            acceptedFiles: ".jpg,.png,.gif,.bmp",
-            dictDefaultMessage: '<h3>拖动文件至此即可上传</h3>',
-            autoProcessQueue: false,
-            init: function() {
-                var submitButton = document.querySelector("#SubmitAll");
-                myDropzone = this; // closure
-
-                submitButton.addEventListener("click", function() {
-                    myDropzone.processQueue(); // Tell Dropzone to process all queued files.
-                });
-
-                this.on("success", function(file, result) {
-                    file.previewTemplate.appendChild(document.createTextNode(result.message));
-                });
-            }
-        };
-    </script>
+    <script src="/js/init.js"></script>
 @stop

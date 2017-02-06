@@ -13,11 +13,3 @@
         {!! $images->render() !!}
     </div>
 @stop
-
-@section('js')
-    <script>
-        function confirmDelete() {
-            return confirm('确定要删除图片吗？');
-        }
-    </script>
-@stop

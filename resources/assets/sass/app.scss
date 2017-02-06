@@ -66,6 +66,10 @@ img {
   background-color: $navbar-color;
 }
 
+.dropdown-menu {
+  min-width: 120px;
+}
+
 #logo {
   float: left;
   margin-right: 10px;

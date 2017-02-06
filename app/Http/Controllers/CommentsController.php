@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -34,6 +35,9 @@ class CommentsController extends Controller
 
     public function destroy($id)
     {
-
+        $comment = Comment::findOrFail($id);
+        $comment->delete();
+        session()->flash('success', '删除评论成功');
+        return redirect()->back();
     }
 }

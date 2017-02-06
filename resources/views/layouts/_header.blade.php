@@ -5,7 +5,6 @@
             <nav>
                 <ul class="nav navbar-nav navbar-left">
                     @if (Auth::check())
-                        <li><a href="{{ route('users.index') }}">test</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 动态 <b class="caret"></b>
