@@ -10,10 +10,10 @@
             {{ csrf_field() }}
             <button type="submit" class="btn btn-sm btn-default">修改</button>
         </form>
-        <form action="{{ route('images.destroy', $image->id) }}" class="inline_form" method="POST">
+        <form action="{{ route('images.destroy', $image->id) }}" class="inline_form" method="POST" id="image-{{ $image->id }}-delete">
             {{ csrf_field() }}
             {{ method_field('DELETE') }}
-            <button type="submit" class="btn btn-sm btn-danger status-delete-btn" onclick="return confirm('确定要删除图片吗？')">删除</button>
+            <button type="button" class="btn btn-sm btn-danger image-delete-button" onclick="submitForm('image-{{ $image->id }}-delete', '确定删除这个图片吗？')">删除</button>
         </form>
     </div>
 </div>

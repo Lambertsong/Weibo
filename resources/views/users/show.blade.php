@@ -40,4 +40,6 @@
     <script src="/js/wangEditor.js"></script>
     <script src="/js/editors.js"></script>
     <script src="/js/comment.js"></script>
+    <script src="/js/layer/layer.js"></script>
+    <script src="/js/dialog.js"></script>
 @stop

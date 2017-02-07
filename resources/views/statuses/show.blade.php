@@ -11,3 +11,8 @@
         </div>
     </div>
 @stop
+
+@section('js')
+    <script src="/js/layer/layer.js"></script>
+    <script src="/js/dialog.js"></script>
+@stop

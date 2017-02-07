@@ -3296,163 +3296,163 @@ _e(function (E, $) {
             title: '贴吧表情',
             data: [
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon1.png',
+                    icon: '/imgs/tieba/emotion1.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon2.png',
+                    icon: '/imgs/tieba/emotion2.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon3.png',
+                    icon: '/imgs/tieba/emotion3.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon4.png',
+                    icon: '/imgs/tieba/emotion4.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon5.png',
+                    icon: '/imgs/tieba/emotion5.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon6.png',
+                    icon: '/imgs/tieba/emotion6.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon7.png',
+                    icon: '/imgs/tieba/emotion7.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon8.png',
+                    icon: '/imgs/tieba/emotion8.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon9.png',
+                    icon: '/imgs/tieba/emotion9.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon10.png',
+                    icon: '/imgs/tieba/emotion10.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon11.png',
+                    icon: '/imgs/tieba/emotion11.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon12.png',
+                    icon: '/imgs/tieba/emotion12.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon13.png',
+                    icon: '/imgs/tieba/emotion13.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon14.png',
+                    icon: '/imgs/tieba/emotion14.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon15.png',
+                    icon: '/imgs/tieba/emotion15.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon16.png',
+                    icon: '/imgs/tieba/emotion16.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon17.png',
+                    icon: '/imgs/tieba/emotion17.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon18.png',
+                    icon: '/imgs/tieba/emotion18.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon19.png',
+                    icon: '/imgs/tieba/emotion19.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon20.png',
+                    icon: '/imgs/tieba/emotion20.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon21.png',
+                    icon: '/imgs/tieba/emotion21.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon22.png',
+                    icon: '/imgs/tieba/emotion22.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon23.png',
+                    icon: '/imgs/tieba/emotion23.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon24.png',
+                    icon: '/imgs/tieba/emotion24.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon25.png',
+                    icon: '/imgs/tieba/emotion25.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon26.png',
+                    icon: '/imgs/tieba/emotion26.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon27.png',
+                    icon: '/imgs/tieba/emotion27.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon28.png',
+                    icon: '/imgs/tieba/emotion28.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon29.png',
+                    icon: '/imgs/tieba/emotion29.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon30.png',
+                    icon: '/imgs/tieba/emotion30.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon31.png',
+                    icon: '/imgs/tieba/emotion31.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon32.png',
+                    icon: '/imgs/tieba/emotion32.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon33.png',
+                    icon: '/imgs/tieba/emotion33.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon34.png',
+                    icon: '/imgs/tieba/emotion34.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon35.png',
+                    icon: '/imgs/tieba/emotion35.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon36.png',
+                    icon: '/imgs/tieba/emotion36.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon37.png',
+                    icon: '/imgs/tieba/emotion37.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon38.png',
+                    icon: '/imgs/tieba/emotion38.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon39.png',
+                    icon: '/imgs/tieba/emotion39.png',
                     value: '[滑稽]'
                 },
                 {
-                    icon: 'http://static.tieba.baidu.com/tb/editor/images/client/image_emoticon40.png',
+                    icon: '/imgs/tieba/emotion40.png',
                     value: '[滑稽]'
                 }
             ]
@@ -3461,59 +3461,59 @@ _e(function (E, $) {
             title: '微博表情',
             data: [
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/7a/shenshou_thumb.gif',
+                    icon: '/imgs/weibo/7a/shenshou_thumb.gif',
                     value: '[草泥马]'    
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/60/horse2_thumb.gif',
+                    icon: '/imgs/weibo/60/horse2_thumb.gif',
                     value: '[神马]'    
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/bc/fuyun_thumb.gif',
+                    icon: '/imgs/weibo/bc/fuyun_thumb.gif',
                     value: '[浮云]'    
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/c9/geili_thumb.gif',
+                    icon: '/imgs/weibo/c9/geili_thumb.gif',
                     value: '[给力]'    
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/f2/wg_thumb.gif',
+                    icon: '/imgs/weibo/f2/wg_thumb.gif',
                     value: '[围观]'    
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/70/vw_thumb.gif',
+                    icon: '/imgs/weibo/70/vw_thumb.gif',
                     value: '[威武]'
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/6e/panda_thumb.gif',
+                    icon: '/imgs/weibo/6e/panda_thumb.gif',
                     value: '[熊猫]'
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/81/rabbit_thumb.gif',
+                    icon: '/imgs/weibo/81/rabbit_thumb.gif',
                     value: '[兔子]'
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/bc/otm_thumb.gif',
+                    icon: '/imgs/weibo/bc/otm_thumb.gif',
                     value: '[奥特曼]'
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/15/j_thumb.gif',
+                    icon: '/imgs/weibo/15/j_thumb.gif',
                     value: '[囧]'
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/89/hufen_thumb.gif',
+                    icon: '/imgs/weibo/89/hufen_thumb.gif',
                     value: '[互粉]'
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/c4/liwu_thumb.gif',
+                    icon: '/imgs/weibo/c4/liwu_thumb.gif',
                     value: '[礼物]'
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/ac/smilea_thumb.gif',
+                    icon: '/imgs/weibo/ac/smilea_thumb.gif',
                     value: '[呵呵]'
                 },
                 {
-                    icon: 'http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/0b/tootha_thumb.gif',
+                    icon: '/imgs/weibo/0b/tootha_thumb.gif',
                     value: '[哈哈]'
                 }
             ]

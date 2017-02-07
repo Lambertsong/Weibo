@@ -21,7 +21,7 @@ class CommentsController extends Controller
     {
         $this->validate($request, [
             'status' => 'required',
-            'content' => 'required|max:160'
+            'content' => 'required|max:100'
         ]);
 
         Auth::user()->comments()->create([

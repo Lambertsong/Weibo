@@ -39,7 +39,7 @@ class StatusesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'content' => 'required|max:500'
+            'content' => 'required|max:200'
         ]);
 
         Auth::user()->statuses()->create([
@@ -57,7 +57,7 @@ class StatusesController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'content' => 'required|max:500'
+            'content' => 'required|max:200'
         ]);
 
         $status = Status::findOrFail($id);
