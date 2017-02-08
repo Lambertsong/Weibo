@@ -6045,9 +6045,17 @@ _e(function (E, $) {
             // 不要重复加载
             return;
         }
+
+        // 查询DOM节点避免重复加载
+        var scripts = document.getElementsByTagName('script');
+        var length = scripts.length;
+        if(scripts[length-1].attributes.src.value == "/js/highlight.min.js") {
+            return;
+        }
+
         var script = document.createElement("script");
         script.type = "text/javascript";
-        script.src = "//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js";
+        script.src = "/js/highlight.min.js";
         document.body.appendChild(script);
     }
     

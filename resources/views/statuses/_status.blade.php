@@ -25,7 +25,7 @@
             @include('shared.errors')
             {{csrf_field()}}
             <input type="hidden" name="status" value="{{ $status->id }}">
-            <textarea class="form-control comment-form" rows="3" name="content" id="content">{{ old('content') }}</textarea>
+            <textarea class="form-control comment-form" rows="3" name="content">{{ old('content') }}</textarea>
             <button type="submit" class="btn btn-primary">发布评论</button>
         </form>
     </span>
