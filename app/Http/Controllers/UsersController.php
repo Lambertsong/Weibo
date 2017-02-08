@@ -172,4 +172,16 @@ class UsersController extends Controller
 
         return redirect()->back();
     }
+
+    public function getUserInfo(Request $request)
+    {
+        $id = $request->input('id');
+        $user = User::find($id);
+
+        if(!$user) {
+            return response('未找到用户', 404);
+        } else {
+            return view('users.user_info', compact('user'));
+        }
+    }
 }

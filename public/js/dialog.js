@@ -8,7 +8,7 @@ var dialog = {
         layer.open({
             content:message,
             icon:2,
-            title : '错误提示',
+            title : '错误提示'
         });
     },
 
@@ -52,11 +52,19 @@ var dialog = {
  */
 function submitForm(id, message) {
     layer.open({
-        content : message,
-        icon:3,
-        btn : ['是','否'],
-        yes : function(){
+        content: message,
+        icon: 3,
+        btn: ['是','否'],
+        yes: function(){
             document.getElementById(id).submit();
         }
+    });
+}
+
+function error(message) {
+    layer.open({
+        content: message,
+        icon: 2,
+        title : '错误提示'
     });
 }

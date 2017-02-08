@@ -45,3 +45,5 @@ get('/users/{id}/avatar', 'UsersController@getAvatar')->name('avatar.get');
 post('/users/{id}/avatar', 'UsersController@postAvatar')->name('avatar.post');
 
 resource('comment', 'CommentsController', ['only' => ['store', 'destroy']]);
+
+post('getuserinfo', 'UsersController@getUserInfo')->name('user.getuserinfo');

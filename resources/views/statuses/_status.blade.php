@@ -1,5 +1,5 @@
 <li id="status-{{ $status->id }}">
-    <a href="{{ route('users.show', $user->id )}}">
+    <a href="{{ route('users.show', $user->id )}}" onmouseover="showUserInfo(this, '{{ $user->id }}')">
         <img src="{{ $user->avatar() }}" alt="{{ $user->name }}" class="gravatar"/>
     </a>
     <span class="user">

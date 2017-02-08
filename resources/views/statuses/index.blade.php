@@ -29,4 +29,5 @@
     <script src="/js/comment.js"></script>
     <script src="/js/layer/layer.js"></script>
     <script src="/js/dialog.js"></script>
+    <script src="/js/init.js"></script>
 @stop
