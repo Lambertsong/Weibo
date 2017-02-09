@@ -2,6 +2,27 @@
  * Created by d4smart on 2017/2/6.
  */
 
+// 获取元素
+var divs = document.getElementsByClassName('comment-operation');
+// 生成编辑器
+var length = divs.length;
+for(var i = 0; i < length; i++) {
+    divs[i].addEventListener('mouseover', function () {
+        var forms = this.getElementsByTagName('form');
+        var length = forms.length;
+        for(var i = 0; i < length; i++) {
+            forms[i].style.display = 'inline';
+        }
+    });
+    divs[i].addEventListener('mouseout', function () {
+        var forms = this.getElementsByTagName('form');
+        var length = forms.length;
+        for(var i = 0; i < length; i++) {
+            forms[i].style.display = 'none';
+        }
+    });
+}
+
 if(document.getElementById('img')) {
     $('#img').Jcrop({
         onSelect: updateCoords

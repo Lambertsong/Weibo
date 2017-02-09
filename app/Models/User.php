@@ -124,4 +124,9 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->followings->contains($user_id);
     }
+
+    public function isSuperAdmin()
+    {
+        return $this->attributes['id'] === 1;
+    }
 }

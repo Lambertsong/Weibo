@@ -220,6 +220,10 @@ aside {
     border-top: none;
     position: relative;
     list-style-type: none;
+    form {
+      display: none;
+      margin-left: 30px;
+    }
   }
   p {
     display: inline;

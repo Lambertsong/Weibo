@@ -8518,6 +8518,11 @@ aside textarea {
   list-style-type: none;
 }
 
+.comments li form {
+  display: none;
+  margin-left: 30px;
+}
+
 .comments p {
   display: inline;
   font-size: 0.9em;
