@@ -7,6 +7,9 @@
     </span>
 
     <span class="contents">{!! $status->content !!}</span>
+    @can('update', $status)
+        <button type="button" class="btn btn-sm btn-info status-edit-btn" onclick="window.location.href='{{ route('status.edit', $status->id) }}'">修改</button>
+    @endcan
     @can('destroy', $status)
         <form action="{{ route('status.destroy', $status->id) }}" method="POST" id="status-{{ $status->id }}-delete">
             {{ csrf_field() }}

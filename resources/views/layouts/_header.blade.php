@@ -21,6 +21,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="{{ route('images.create') }}">上传图片</a></li>
                                 <li><a href="{{ route('images.index') }}">我的图片</a></li>
+                                <li><a href="{{ route('images.all') }}">所有图片</a></li>
                             </ul>
                         </li>
                     @endif

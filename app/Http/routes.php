@@ -37,6 +37,7 @@ get('/users/{id}/followers', 'UsersController@followers')->name('users.followers
 post('/users/followers/{id}', 'FollowersController@store')->name('followers.store');
 delete('/users/followers/{id}', 'FollowersController@destroy')->name('followers.destroy');
 
+get('images/all', 'ImagesController@all')->name('images.all');
 resource('images', 'ImagesController');
 get('images/{id}/download', 'ImagesController@download');
 post('images/upload', 'ImagesController@upload')->name('images.upload');

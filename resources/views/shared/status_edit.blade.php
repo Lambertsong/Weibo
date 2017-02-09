@@ -4,5 +4,5 @@
     {{ method_field('PUT') }}
     <textarea class="form-control" rows="12" name="content" id="content">{{ $status->content }}</textarea>
     <br>
-    <button type="submit" class="btn btn-primary pull-right">发布</button>
+    <button type="submit" class="btn btn-primary pull-right">更新</button>
 </form>

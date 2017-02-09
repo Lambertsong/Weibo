@@ -8480,9 +8480,15 @@ input {
   margin-top: 5px;
 }
 
-.statuses form button.status-delete-btn {
+.statuses button.status-delete-btn {
   position: absolute;
   right: 0;
+  top: 10px;
+}
+
+.statuses button.status-edit-btn {
+  position: absolute;
+  right: 60px;
   top: 10px;
 }
 

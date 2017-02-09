@@ -30,6 +30,12 @@ class ImagesController extends Controller
         return view('images/index', compact('images'));
     }
 
+    public function all()
+    {
+        $images = Image::orderBy('created_at', 'desc')->paginate(12);
+        return view('images/index', compact('images'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -118,6 +124,7 @@ class ImagesController extends Controller
     public function edit($id)
     {
         $image = Image::findOrFail($id);
+        $this->authorize('update', $image);
         return view('images/edit', compact('image'));
     }
 
@@ -131,6 +138,7 @@ class ImagesController extends Controller
     public function update(Request $request, $id)
     {
         $image = Image::findOrFail($id);
+        $this->authorize('update', $image);
 
         $x = $request->input('x');
         $y = $request->input('y');
@@ -152,6 +160,7 @@ class ImagesController extends Controller
     public function destroy($id)
     {
         $image = Image::findOrFail($id);
+        $this->authorize('destroy', $image);
         Storage::delete($image->path);
         $image->delete();
         session()->flash('success', '图片已被成功删除！');

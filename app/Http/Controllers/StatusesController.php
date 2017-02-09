@@ -51,6 +51,7 @@ class StatusesController extends Controller
     public function edit($id)
     {
         $status = Status::findOrFail($id);
+        $this->authorize('update', $status);
         return view('statuses/create', compact('status'));
     }
 
@@ -61,10 +62,11 @@ class StatusesController extends Controller
         ]);
 
         $status = Status::findOrFail($id);
+        $this->authorize('update', $status);
         $status->content = $request->input('content');
         $status->save();
 
-        return redirect()->back();
+        return redirect()->route('status.index');
     }
 
     public function destroy($id)
