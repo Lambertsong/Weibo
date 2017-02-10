@@ -14,7 +14,7 @@
         <form action="{{ route('status.destroy', $status->id) }}" method="POST" id="status-{{ $status->id }}-delete">
             {{ csrf_field() }}
             {{ method_field('DELETE') }}
-            <button type="button" class="btn btn-sm btn-danger status-delete-btn" onclick="submitForm('status-{{ $status->id }}-delete', '确定要删除这条动态码？')">删除</button>
+            <button type="button" class="btn btn-sm btn-danger status-delete-btn" onclick="submitForm('status-{{ $status->id }}-delete', '确定要删除这条动态吗？')">删除</button>
         </form>
     @endcan
     <span class="timestamp">

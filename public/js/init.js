@@ -23,9 +23,17 @@ for(var i = 0; i < length; i++) {
     });
 }
 
+// 普通图片的编辑
 if(document.getElementById('img')) {
     $('#img').Jcrop({
         onSelect: updateCoords
+    });
+}
+// 用户头像的编辑
+if(document.getElementById('img-avatar')) {
+    $('#img-avatar').Jcrop({
+        onSelect: updateCoords,
+        aspectRatio: 1
     });
 }
 
@@ -46,6 +54,7 @@ if(document.getElementById('dropzone')) {
     Dropzone.options.dropzone = {
         paramName: "image",
         maxFilesize: 2,
+        parallelUploads: 3,
         acceptedFiles: ".jpg,.png,.gif",
         dictDefaultMessage: '<h3>拖动文件至此即可上传，支持jpg，png，gif格式</h3>',
         autoProcessQueue: false,

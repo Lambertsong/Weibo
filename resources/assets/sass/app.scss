@@ -112,18 +112,26 @@ input {
 .users {
   list-style: none;
   margin: 0;
-  padding-left: 0;
+  padding: 0;
   li {
-    overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
+    border-top: 1px solid $gray-lighter;
+    position: relative;
+    .username {
+      display: block;
+      margin: 12px 60px;
+      font-size: 1.3em;
+      font-style: italic;
+    }
+    form {
+      display: inline;
+    }
+    button {
+      position: relative;
+      float: right;
+      margin: 0 10px;
+    }
   }
-}
-
-.delete-btn {
-  float: right;
-  position: relative;
-  right: 0;
 }
 
 /* Users edit */
@@ -173,6 +181,7 @@ input {
     form {
       margin-left: 60px;
       margin-top: 10px;
+      margin-bottom: 30px;
       button {
         position: absolute;
         margin-top: 10px;

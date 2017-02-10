@@ -19,7 +19,7 @@
                     {{ csrf_field() }}
                 </form>
                 <br>
-                <button id="SubmitAll" class="btn btn-primary">点击上传所有图片</button>
+                <button id="SubmitAll" class="btn btn-primary">点击上传图片</button>
             </div>
         </div>
     </div>

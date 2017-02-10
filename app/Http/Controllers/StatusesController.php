@@ -45,7 +45,9 @@ class StatusesController extends Controller
         Auth::user()->statuses()->create([
             'content' => $request->input('content')
         ]);
-        return redirect()->back();
+
+        session()->flash('success', '微博发布成功！');
+        return redirect()->route('status.index');
     }
 
     public function edit($id)
@@ -66,6 +68,7 @@ class StatusesController extends Controller
         $status->content = $request->input('content');
         $status->save();
 
+        session()->flash('success', '微博更新成功！');
         return redirect()->route('status.index');
     }
 

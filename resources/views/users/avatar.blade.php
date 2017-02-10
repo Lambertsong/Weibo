@@ -17,7 +17,7 @@
 
                 @if($user->avatar)
                     <div id="info">
-                        <img src="{{ route('images.show', $user->avatar) }}" id="img">
+                        <img src="{{ route('images.show', $user->avatar) }}" id="img-avatar">
 
                         <form method="POST" action="{{ route('images.update', $user->avatar) }}">
                             {{ csrf_field() }}

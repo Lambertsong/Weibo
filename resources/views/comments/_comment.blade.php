@@ -5,7 +5,7 @@
         <form action="{{ route('comment.destroy', $comment->id) }}" method="POST" id="comment-{{ $comment->id }}-delete">
             {{ csrf_field() }}
             {{ method_field('DELETE') }}
-            <i class="fa fa-trash" aria-hidden="true" onclick="submitForm('comment-{{ $comment->id }}-delete', '确定要删除这条动态码？')"></i>
+            <i class="fa fa-trash" aria-hidden="true" onclick="submitForm('comment-{{ $comment->id }}-delete', '确定要删除这条评论吗？')"></i>
         </form>
     @endcan
 </li>

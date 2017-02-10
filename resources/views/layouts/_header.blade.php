@@ -12,6 +12,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="{{ route('status.create') }}">发布动态</a></li>
                                 <li><a href="{{ route('status.index') }}">我的动态</a></li>
+                                <li><a href="/">所有动态</a> </li>
                             </ul>
                         </li>
                         <li class="dropdown">
