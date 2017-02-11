@@ -13,7 +13,7 @@
 
                 <div class="gravatar_edit">
                     <a href="{{ route('avatar.get', $user->id) }}" target="_blank">
-                        <img src="{{ $user->avatar('200') }}" alt="{{ $user->name }}" class="gravatar"/>
+                        <img src="{{ $user->avatar('200') }}?width=100" alt="{{ $user->name }}" class="gravatar"/>
                     </a>
                 </div>
 

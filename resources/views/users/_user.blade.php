@@ -1,6 +1,6 @@
 <li>
     <span onmouseover="showUserInfo(this, '{{ $user->id }}')">
-        <img src="{{ $user->avatar() }}" alt="{{ $user->name }}" class="gravatar">
+        <img src="{{ $user->avatar() }}?width=50" alt="{{ $user->name }}" class="gravatar">
     </span>
     <span class="username">
         {{ $user->name }}
