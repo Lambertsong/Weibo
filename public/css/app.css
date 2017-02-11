@@ -8714,10 +8714,10 @@ aside textarea {
   border-right-width: 0;
 }
 
-.rec-image {
+.thumbnail .rec-image {
   float: left;
   margin: 6px;
-  max-width: 200px;
+  width: 200px;
 }
 
 .inline_form {

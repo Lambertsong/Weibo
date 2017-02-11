@@ -1,6 +1,6 @@
 <div class="col-md-3">
     <div class="thumbnail">
-        <img src="{{ route('images.show', $image->id) }}" class="rec-image" alt="image-{{ $image->id }}">
+        <img src="{{ route('images.show', $image->id) }}?width=200" class="rec-image" alt="image-{{ $image->id }}">
 
         <button type="button" class="btn btn-sm btn-default" onclick="window.location.href='{{ route('images.show', $image->id) }}'">查看图片</button>
         @can('update', $image)

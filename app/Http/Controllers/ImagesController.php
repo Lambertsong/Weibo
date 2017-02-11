@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 use Storage;
 use Intervention\Image\ImageManager;
 
@@ -112,7 +113,24 @@ class ImagesController extends Controller
 
         $manager = new ImageManager();
 
-        return $manager->make(realpath(base_path('storage/app')).'/'.$image->path)->response();
+        // 根据传进的get参数裁剪图片
+        $originImg = $manager->make(realpath(base_path('storage/app')).'/'.$image->path);
+        $width = Input::get('width');
+        $height = Input::get('height');
+
+        if($originImg->getWidth() <= $width || $originImg->getHeight() <= $height) {
+            $img = $originImg;  //避免扩大图片
+        } else if($width && $height) {
+            $img = $originImg->resize($width, $height);
+        } else if($width) {
+            $img = $originImg->widen($width);
+        } else if($height) {
+            $img = $originImg->heighten($height);
+        } else {
+            $img = $originImg;
+        }
+
+        return $img->response();
     }
 
     /**
