@@ -4,7 +4,7 @@
         <div class="popover-up">
             <div class="popover-avatar">
                 <a href="{{ route('users.show', $user->id) }}">
-                    <img src="{{ $user->avatar() }}" alt="{{ $user->name }}">
+                    <img src="{{ $user->avatar() }}?width=50" alt="{{ $user->name }}">
                 </a>
             </div>
             <div class="popover-info">
@@ -40,6 +40,7 @@
             </div>
         </div>
         <div class="popover-down">
+            @if(Auth::check())
                 @if ($user->id !== Auth::user()->id)
                     @if (Auth::user()->isFollowing($user->id))
                         <span class="button">
@@ -58,6 +59,7 @@
                         </span>
                     @endif
                 @endif
+            @endif
             <span class="button">
                 <button type="button" class="btn btn-primary btn-sm" onclick="hideUserInfo()">隐藏信息框</button>
             </span>

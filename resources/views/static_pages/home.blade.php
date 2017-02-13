@@ -21,17 +21,14 @@
             </aside>
         </div>
     @else
-        <div class="jumbotron">
-            <h1>Hello dear users~</h1>
-            <p class="lead">
-                你现在所看到的是 <a href="https://github.com/d4smart/Weibo">Weibo</a> 的项目主页。
-            </p>
-            <p>
-                一切，将从这里开始。
-            </p>
-            <p>
-                <a class="btn btn-lg btn-success" href="{{ route('signup') }}" role="button">现在注册</a>
-            </p>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                @include('shared/feed')
+
+                <div style="text-align: center;">
+                    <a class="btn btn-lg btn-success" href="{{ route('signup') }}" role="button">了解更多？</a>
+                </div>
+            </div>
         </div>
     @endif
 @stop
